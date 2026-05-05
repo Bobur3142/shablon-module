@@ -279,7 +279,7 @@
 
       </q-table>
 
-      <!--   Используй это вместо no-data   -->
+      <!--   Используй это вместо и не меняй содержимое no-data   -->
       <div v-if="rows && rows.length < 1" class="flex w-full column no-wrap items-center gap-3 py-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-100">
           <q-icon name="inbox" size="32px" class="text-slate-300" />
@@ -498,3 +498,74 @@ onMounted(async () => {
 </script>
 
 <style></style>
+
+
+<!--
+
+- Ты — senior Frontend Engineer (Vue 3 + Quasar + Tailwind), UI/UX архитектор уровня 2026.
+- Создай новый модуль в проекте Vue 3 + Quasar + Tailwind.
+- Шаблон компонента: src/shablon_components/Tabel.vue — используй как основу структуры.
+- ИСПОЛЬЗУЙ Стили Tailwind как основые стили
+- В шаблоне не меняй содержимое no-data и оставь классы которые я добавил
+- Для класса flex добавь "!" чтоб работал tailwind стили.
+- Используй <script setup lang="ts"> и Composition API.
+- Соблюдай все шаги:
+
+ШАГ 1 — РОУТЕР
+Файл: src/router/routes.ts
+
+Добавь в массив children новый объект:
+{
+  path: '[PATH]',
+  name: 'Page[ComponentName]',
+  component: () => import('pages/[FOLDER]/[FILE].vue'),
+  meta: {
+    icon: '[MDI_ICON]',
+    title: 'modules.[camelCaseName]',
+  }
+},
+
+
+ШАГ 2 — КОНСТАНТЫ
+Файл: src/boot/constants.ts
+
+В объект urls добавь основной URL модуля:
+  [URL_CONST_NAME]: url_http.BASE_API + "[API_PATH]",
+
+Для каждого фильтра с отдельным GET endpoint — добавь отдельный ключ:
+  [URL_CONST_NAME]_STATUSES: url_http.BASE_API + "[API_PATH]/[suffix]",
+
+ШАГ 3 — ПЕРЕВОДЫ
+Файлы: src/i18n/languages/ru.ts / uz.ts / en.ts / uk.ts
+uk: узбекская кириллица
+
+Структура каждого файла:
+export default {
+  "modules":  { ... },
+  "captions": { ... },
+  "system":   { ... },
+}
+
+Правила:
+- НЕ удаляй существующие ключи — только добавляй новые
+- Если ключ уже есть, не добавляй его повторно — не засоряй проект, используй существующий.
+- Название модуля → в "modules": { "[camelCaseName]": "..." }
+- Колонки, фильтры, кнопки → в "captions": { "[key]": "..." }
+- Переводи на все 4 языка: ru / uz (lotin) / en / uk
+
+
+Группировка:
+
+row: key, key, key, .........
+
+<template #body-cell-[сам придуай название]="{ row }">
+  <q-td>
+    <div class="flex flex-col text-sm text-slate-700">
+      <span>{{ row.key }}</span>
+      <span>{{ row.key}}</span>
+      <span>{{ row.key}}</span>
+       .........
+    </div>
+  </q-td>
+</template>
+-->
