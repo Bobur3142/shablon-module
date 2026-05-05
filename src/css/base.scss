@@ -29,6 +29,8 @@
 .my-sticky-header-table-report {
   .q-table {
     thead {
+      position: sticky;
+      top: 0;
       tr {
         th:not(:last-child) {
           text-align: center;
