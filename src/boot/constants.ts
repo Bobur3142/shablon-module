@@ -21,4 +21,5 @@ export const base_lang = {
 export const urls = {
   LOGIN: url_http.BASE_URL + "/garbage-flow/auth/login",
   USER_ROLES: url_http.BASE_API + "/garbage-flow/user-roles",
+  GET_ONE: '/garbage-flow/profile/get-one',
 };

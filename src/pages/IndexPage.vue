@@ -56,7 +56,13 @@ function clickFun(){
       piniaState().accessList = res.data.accessList
       piniaState().auth = auth;
 
-      router.push({ name: 'Tabel' })
+      $axios.get(urls.GET_ONE).then(response => {
+        piniaState().user = response.data
+      }).catch((error) => {
+        showError(error)
+      })
+
+      router.push({ name: 'PageUserRoles' })
     }
   }).catch(err => {
     showError(err)

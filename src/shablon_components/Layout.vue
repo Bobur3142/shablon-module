@@ -62,11 +62,11 @@
     <q-drawer
       v-model="drawer"
       show-if-above
-      :width="256"
+      :width="300"
       :mini-width="68"
       :mini="miniDrawer"
       :breakpoint="768"
-      class="bg-slate-900 flex flex-col"
+      class="bg-slate-900 flex flex-col overflow-hidden"
     >
       <div :class="{'px-5': miniDrawer}" class="flex items-center no-wrap gap-3 h-[60px] px-4 py-2 border-b border-slate-700/50">
         <q-icon size="28px" color="white" name="mdi-apple-icloud" />

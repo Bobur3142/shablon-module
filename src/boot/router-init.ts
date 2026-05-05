@@ -22,7 +22,7 @@ export default ({ router }: { router: any }) => {
     }
 
     if (hasToken && publicPages.includes(to.name)) {
-      return next({ name: 'Tabel' });
+      return next({ name: 'PageUserRoles' });
     }
 
     const accessList = piniaState().accessList.map((el: any) => el.app_actions_id);

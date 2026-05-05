@@ -13,7 +13,7 @@
           dense
           icon="refresh"
           size="md"
-          class="rounded-lg bg-slate-900 px-2 py-1.5 text-white"
+          class="bg-sky-600 rounded-lg p-1.5 text-white"
           :loading="loading"
           @click="refresh"
         >

@@ -25,11 +25,11 @@
           dense
           icon="refresh"
           size="md"
-          class="bg-primary text-white rounded-lg py-1.5 px-2"
+          class="bg-sky-600 rounded-lg p-1.5 text-white"
           :loading="loading"
           @click="getData({ filter: filter, pagination: pagination })"
         >
-          <q-tooltip class="bg-primary text-xs">Обновить</q-tooltip>
+          <q-tooltip class="bg-primary text-xs">{{ t('captions.refresh') }}</q-tooltip>
         </q-btn>
 
         <!-- [CURSOR] Кнопка Экспорт — убери если не нужна -->
@@ -43,13 +43,13 @@
           flat
           dense
           size="md"
-          class="bg-primary text-white rounded-lg normal-case px-3 py-1.5"
+          class="rounded-lg bg-sky-600 px-3 py-1.5 normal-case text-white"
           :loading="loading"
           @click="onAdd"
         >
           <div class="flex items-center gap-2">
             <q-icon size="sm" name="add"></q-icon>
-            <span>Добавить</span>
+            <span>{{ t('captions.add') }}</span>
           </div>
         </q-btn>
 
