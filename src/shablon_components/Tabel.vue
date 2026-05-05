@@ -280,7 +280,7 @@
       </q-table>
 
       <!--   Используй это вместо no-data   -->
-      <div v-if="rows && rows.length > 0" class="flex w-full column no-wrap items-center gap-3 py-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div v-if="rows && rows.length < 1" class="flex w-full column no-wrap items-center gap-3 py-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-100">
           <q-icon name="inbox" size="32px" class="text-slate-300" />
         </div>
